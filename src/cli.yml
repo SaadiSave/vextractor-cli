@@ -1,0 +1,34 @@
+name: "Vextractor CLI"
+version: "0.1"
+author: "Saadi Save"
+about: "Extracts the vocabulary of a text file that is in a language that seperates its words with a unicode space (U+20) and is written in a script supported by unicode UTF-8"
+args:
+    - infile:
+        short: i
+        long: infile
+        value_name: FILE
+        help: Text file that contains the text to be taken a input
+        takes_value: true
+        required: true
+    - alist:
+        short: A
+        long: alist
+        value_name: STRING
+        help: A string containing acronyms in the text, separated by spaces
+        takes_value: true
+    - plist:
+        short: P
+        long: plist
+        value_name: STRING
+        help: A string containing proper nouns in the text, separated by spaces
+        takes_value: true
+    - outfile:
+        short: o
+        long: outfile
+        value_name: FILE
+        help: File to store the vocabulary in
+        takes_value: true
+    - print:
+        short: p
+        long: print
+        help: Prints the vocabulary to the terminal instead of the file
