@@ -1,5 +1,5 @@
 name: "Vextractor CLI"
-version: "0.1"
+version: "0.2"
 author: "Saadi Save"
 about: "Extracts the vocabulary of a text file that is in a language that seperates its words with a unicode space (U+20) and is written in a script supported by unicode UTF-8"
 args:
