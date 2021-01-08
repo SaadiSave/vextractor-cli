@@ -13,4 +13,4 @@ description = "A command line app to extract the vocabulary of a text file"
 
 [dependencies]
 clap = {version = "2.33", features = ["yaml"]}
-vextractor = "*"
+vextractor = "0"
