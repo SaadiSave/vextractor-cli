@@ -4,6 +4,8 @@ use clap::App;
 extern crate vextractor;
 use vextractor::vex;
 use vex::Vextract;
+use std::time::{Duration, Instant};
+
 fn main() {
     let conf = load_yaml!("cli.yml");
     let matches = App::from_yaml(conf).get_matches();
@@ -14,36 +16,44 @@ fn main() {
     let mut alist: Vec<&str> = Vec::new();
     let mut plist: Vec<&str> = Vec::new();
 
-    match matches.value_of("outfile") {
-        Some(s) => outfile = Some(s),
-        None => ()
+    if let Some(s) = matches.value_of("outfile") {
+        outfile = Some(s);
     }
 
-    match matches.value_of("alist") {
-        Some(s) => {
-            for i in s.split(' ') {
-                alist.push(i.clone());
-            }
-        },
-        None => ()
+    if let Some(s) = matches.value_of("alist") {
+        for i in s.split(' ') {
+            alist.push(i.clone());
+        }
     }
 
-    match matches.value_of("plist") {
-        Some(s) => {
-            for i in s.split(' ') {
-                plist.push(i.clone());
-            }
-        },
-        None => ()
+    if let Some(s) = matches.value_of("plist") {
+        for i in s.split(' ') {
+            plist.push(i.clone());
+        }
+    }
+
+    let mut now: Option<Instant> = None;
+    let mut elapsed: Option<Duration> = None;
+
+    if matches.is_present("perf") {
+        now = Some(Instant::now());
     }
 
     let out = Vextract::new(infile, alist, plist);
+
+    if let Some(s) = now {
+        elapsed = Some(s.elapsed());
+    }
+
     if pr == true {
         println!("{}", out.get_sorted_pretty_vocab())
     }
-    
-    match outfile {
-        Some(s) => out.write_to_file(s),
-        None => ()
+
+    if let Some(s) = outfile {
+        out.write_to_file(s);
+    }
+
+    if let Some(s) = elapsed {
+        println!("OK\nExec Time: {:?}", &s);
     }
 }

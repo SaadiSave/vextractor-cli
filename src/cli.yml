@@ -31,4 +31,8 @@ args:
     - print:
         short: p
         long: print
-        help: Prints the vocabulary to the terminal instead of the file
+        help: Prints the vocabulary to the terminal
+    - perf:
+        short: t
+        long: perf
+        help: Prints execution time in seconds
