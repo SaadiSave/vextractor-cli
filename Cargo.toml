@@ -3,6 +3,11 @@ name = "vextractor-cli"
 version = "0.2.0"
 authors = ["Saadi Save"]
 edition = "2018"
+repository = "https://github.com/SaadiSave/vextractor-cli"
+license = "AGPL-3.0"
+readme = "README.md"
+homepage = "https://github.com/SaadiSave/vextractor-cli"
+description = "A command line app to extract the vocabulary of a text file"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
