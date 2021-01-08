@@ -1,6 +1,6 @@
 [package]
 name = "vextractor-cli"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Saadi Save"]
 edition = "2018"
 
@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 clap = {version = "2.33", features = ["yaml"]}
+vextractor = "*"

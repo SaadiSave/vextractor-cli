@@ -1,10 +1,9 @@
-mod vex;
-
 #[macro_use]
 extern crate clap;
 use clap::App;
+extern crate vextractor;
+use vextractor::vex;
 use vex::Vextract;
-
 fn main() {
     let conf = load_yaml!("cli.yml");
     let matches = App::from_yaml(conf).get_matches();

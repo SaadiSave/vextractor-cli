@@ -53,9 +53,9 @@ dependencies = [
 
 [[package]]
 name = "libc"
-version = "0.2.81"
+version = "0.2.82"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1482821306169ec4d07f6aca392a4681f66c75c9918aa49641a2595db64053cb"
+checksum = "89203f3fba0a3795506acaad8ebce3c80c0af93f994d5a1d7a0b1eeb23271929"
 
 [[package]]
 name = "strsim"
@@ -85,10 +85,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1bddf1187be692e79c5ffeab891132dfb0f236ed36a43c7ed39f1165ee20191"
 
 [[package]]
+name = "vextractor"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aca4d098f9bcc5ed8f1451ab89cc9abfad9c19b71afa075e1f923ebb78e356fe"
+
+[[package]]
 name = "vextractor-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap",
+ "vextractor",
 ]
 
 [[package]]
