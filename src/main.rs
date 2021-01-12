@@ -3,8 +3,7 @@
 extern crate clap;
 use clap::App;
 extern crate vextractor;
-use vextractor::vex;
-use vex::Vextract;
+use vextractor::vex::Vextract;
 use std::time::{Duration, Instant};
 
 fn main() {

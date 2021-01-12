@@ -86,9 +86,9 @@ checksum = "f1bddf1187be692e79c5ffeab891132dfb0f236ed36a43c7ed39f1165ee20191"
 
 [[package]]
 name = "vextractor"
-version = "0.1.2"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aca4d098f9bcc5ed8f1451ab89cc9abfad9c19b71afa075e1f923ebb78e356fe"
+checksum = "e96b9cd87dd0f73c8c3058e9e4257259d61dfa18919c4fa36fc50cd5d89f8518"
 
 [[package]]
 name = "vextractor-cli"
